@@ -12,8 +12,9 @@ servers=(
 for ip in "${servers[@]}"
 do
   # Define the destination path
-  dest="root@185.194.217.154:/root/test_results/Server-${ip##*.}/test-file.txt"
+  dest="C:/Users/akaly/Desktop/test_results/Server-${ip##*.}/test-file.txt"
 
   # Copy the file from the remote server to the local machine
   scp -r "root@$ip:/root/backup_test/test-file.txt" "$dest"
 done
+
